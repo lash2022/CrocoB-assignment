@@ -26,16 +26,4 @@ export class UserpageComponent {
     ){}
 
 
-  /*ngOnInit() {
-      this.route.params.subscribe(params => {
-          this.userId = params['id'];
-          console.log(this.userId);
-      })
-
-        this.usersService.getUser(this.userId).subscribe(user => {
-            this.user = user;
-        })
-  }*/
-
-
 }

@@ -31,18 +31,5 @@ export class PostCardComponent implements OnInit{
   }
 
 
-  /*formatText(text: string, partIndex: number): string {
-    const middleIndex = Math.floor(text.length / 2);
-    const beforeMiddle = text.substring(0, middleIndex);
-    const middle = text.substring(middleIndex, middleIndex + 1);
-    const afterMiddle = text.substring(middleIndex + 1);
-
-    if (partIndex === 1) {
-      return `${beforeMiddle}${middle}${afterMiddle}`;
-    }
-
-    return text;
-  }*/
-
 
 }

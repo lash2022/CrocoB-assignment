@@ -22,13 +22,6 @@ export class UserpostsComponent {
     private usersService: UsersService
   ) { }
 
-  /*ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.userId = params['id'];
-      console.log(this.userId);
-    })
 
-
-  }*/
 
 }
