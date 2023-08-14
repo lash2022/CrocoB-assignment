@@ -1,0 +1,28 @@
+<div class="container" >
+  <h1>Users</h1>
+  <div class="wrapper">
+    <table *ngIf="users$ | async; else noUsers">
+      <tr >
+        <th data-cell="id">ID</th>
+        <th data-cell="name">name</th>
+        <th data-cell="username">username</th>
+        <th data-cell="email">email</th>
+        <th data-cell="phone">phone</th>
+        <th data-cell="info">info</th>
+      </tr>
+      <tr *ngFor="let user of users$ | async">
+        <td data-cell="id">{{user.id}}</td>
+        <td data-cell="name">{{user.name}}</td>
+        <td data-cell="username">{{user.username}}</td>
+        <td data-cell="email">{{user.email}}</td>
+        <td data-cell="phone">{{user.phone}}</td>
+        <td data-cell="info">
+          <app-button [routerLink]="['/user', user.id]" label="details"></app-button>
+        </td>
+      </tr>
+    </table>
+    <ng-template #noUsers>
+      <h1>...Loading</h1>
+    </ng-template>
+  </div>
+</div>

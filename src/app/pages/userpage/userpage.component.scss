@@ -1,0 +1,79 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+
+  .wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    border-radius: 5px;
+
+    div {
+      padding: 50px 20px;
+    }
+
+    .left-col {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      button {
+        cursor: pointer;
+        position: relative;
+        color: transparent;
+        padding: 5px 15px;
+        border: none;
+        span {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transition: .3s;
+
+          &:nth-child(1) {
+            width: 0%;
+            height: 100%;
+            background: white;
+            z-index: 0;
+          }
+
+          &:nth-child(2) {
+            color: white;
+            padding: 5px 15px;
+            z-index: 1;
+          }
+        }
+
+        &:hover {
+          span {
+            &:nth-child(1) {
+              width: 100%;
+            }
+
+            &:nth-child(2) {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      width: 80%;
+
+      div {
+        padding: 30px 10px;
+      }
+
+      .left-col {
+        text-align: center;
+      }
+    }
+  }
+}

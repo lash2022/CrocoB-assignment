@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="title">{{post.title}}</div>
+  <div class="bio" >
+    <div class="parts" >
+      <span *ngFor="let part of dividedParts; let i = index" >
+        <ng-container *ngIf="i === 1"><strong class="colored">{{part}}</strong></ng-container>
+        {{part}}
+      </span>
+    </div>
+  </div>
+</div>
